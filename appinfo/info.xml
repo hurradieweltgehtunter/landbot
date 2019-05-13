@@ -8,11 +8,11 @@
 	<author>Florian Lenz</author>
 	<version>0.0.1</version>
 	<category>customization</category>
-	<screenshot>https://raw.githubusercontent.com/hurradieweltgehtunter/oc_landbot/master/owncloud-app-landbot.jpg</screenshot>
+	<screenshot>https://raw.githubusercontent.com/hurradieweltgehtunter/landbot/master/owncloud-app-landbot.jpg</screenshot>
 	<dependencies>
 		<owncloud min-version="9.1.5" max-version="12.0"/>
 	</dependencies>
-	<website>https://github.com/hurradieweltgehtunter/oc_landbot</website>
-	<bugs>https://github.com/hurradieweltgehtunter/oc_landbot/issues</bugs>
-	<repository type="git">https://github.com/hurradieweltgehtunter/oc_landbot.git</repository>
+	<website>https://github.com/hurradieweltgehtunter/landbot</website>
+	<bugs>https://github.com/hurradieweltgehtunter/landbot/issues</bugs>
+	<repository type="git">https://github.com/hurradieweltgehtunter/landbot.git</repository>
 </info>
