@@ -8,7 +8,7 @@
 	<author>Florian Lenz</author>
 	<version>0.0.1</version>
 	<category>customization</category>
-	<screenshot>https://raw.githubusercontent.com/tomneedham/oc_xmas/master/screenshot.jpg</screenshot>
+	<screenshot>https://raw.githubusercontent.com/hurradieweltgehtunter/oc_landbot/master/owncloud-app-landbot.jpg</screenshot>
 	<dependencies>
 		<owncloud min-version="9.1.5" max-version="12.0"/>
 	</dependencies>
