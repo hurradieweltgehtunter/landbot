@@ -4,19 +4,32 @@ window.onload = function() {
 
 
 $(document).ready(function() {
-    var s = document.createElement("script");
-    s.type = "text/javascript";
-    s.src = "https://static.landbot.io/landbot-widget/landbot-widget-1.0.0.js";
-    // Use any selector
-    $("head").append(s);
 
-
-    var myLandbotLivechat = new LandbotLivechat({
+  $.ajax({
+    url: 'https://static.landbot.io/landbot-widget/landbot-widget-1.0.0.js',
+    dataType: "script",
+    success: function() {
+      var myLandbotLivechat = new LandbotLivechat({
         index: 'https://landbot.io/u/H-174286-HU8FGLJPTP6G6PRK/index.html',
-    });
+      });
 
-    // Show a proactive message after 10 seconds
-    setTimeout(() => {
-        myLandbotLivechat.sendProactive("Need some help?");
-    }, 10000);
+      var urlCustomAvatar = "https://storage.googleapis.com/media.helloumi.com/channels/IRSRASHJB13UYVU6DCOWZBJCJUUTRRD7.jpg";
+
+      //DO NOT EDIT BELOW THIS LINE//
+      var holderUrl = `url(${urlCustomAvatar})`
+      myLandbotLivechat.on('landbot-load', () => {
+        window.document.getElementsByClassName("LandbotProactive__frame__content")[0].contentDocument.body.childNodes[0].childNodes[0].childNodes[3].childNodes[1].childNodes[0].childNodes[0].childNodes[0].style.backgroundImage = holderUrl
+
+        var frameBody = window.document.getElementsByClassName("LandbotProactive__frame__content")[0].contentDocument.body;
+        frameBody.querySelector(".hu-message-author").innerHTML = "ownCloud.online"
+      })
+
+      setTimeout(() => {
+        myLandbotLivechat.sendProactive("Hello there!");
+      }, 5000);
+    }
+  });
+
+
+
 })
