@@ -1,5 +1,5 @@
 window.onload = function() {
-    
+
 }();
 
 
@@ -10,7 +10,7 @@ $(document).ready(function() {
     // Use any selector
     $("head").append(s);
 
-    
+
     var myLandbotLivechat = new LandbotLivechat({
         index: 'https://landbot.io/u/H-174286-HU8FGLJPTP6G6PRK/index.html',
     });
@@ -19,7 +19,4 @@ $(document).ready(function() {
     setTimeout(() => {
         myLandbotLivechat.sendProactive("Need some help?");
     }, 10000);
-
-
-    
 })

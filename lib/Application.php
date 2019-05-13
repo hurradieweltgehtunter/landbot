@@ -13,11 +13,19 @@ class Application extends App {
 
 	public function __construct(array $urlParams = []) {
 
+		parent::__construct('landbot', $urlParams);
 		$container = $this->getContainer();
 
-		$policy = new OCP\AppFramework\Http\EmptyContentSecurityPolicy();
-		$policy->addAllowedScriptDomain('landbot.io');
-		\OC::$server->getContentSecurityPolicyManager()->addDefaultPolicy($policy);
+		// Start the snow loader
+		$loader = new LandbotLoader(
+			$container->getServer()->getConfig(),
+			$container->getServer()->getRequest(),
+			$container->getServer()->getUserSession()
+		);
+
+		// $policy = new OCP\AppFramework\Http\EmptyContentSecurityPolicy();
+		// $policy->addAllowedScriptDomain('landbot.io');
+		// \OC::$server->getContentSecurityPolicyManager()->addDefaultPolicy($policy);
 
 	}
 
