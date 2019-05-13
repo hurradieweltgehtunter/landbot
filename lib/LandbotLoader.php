@@ -29,7 +29,7 @@ class LandbotLoader {
 		IRequest $request,
 		IUserSession $userSession) {
 
-		Util::addScript('xmas', 'landbot');
+		Util::addScript('oc_landbot', 'landbot');
 
 	}
 

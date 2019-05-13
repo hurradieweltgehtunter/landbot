@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <info>
-	<id>xmas</id>
-	<description>Adds beautiful snowflakes overlay to your web UI, in combination with your existing theme.</description>
-	<summary>Adds a beautiful snowflakes overlay to your web UI to improve your festive feelings!</summary>
-	<name>Xmas</name>
+	<id>landbot</id>
+	<description>Insert landbot.io chatbots</description>
+	<summary>Insert landbot.io chatbots</summary>
+	<name>Landbot</name>
 	<licence>AGPL</licence>
-	<author>Tom Needham</author>
-	<version>0.0.4</version>
+	<author>Florian Lenz</author>
+	<version>0.0.1</version>
 	<category>customization</category>
 	<screenshot>https://raw.githubusercontent.com/tomneedham/oc_xmas/master/screenshot.jpg</screenshot>
 	<dependencies>
-		<owncloud min-version="9.1.5" max-version="10.0"/>
+		<owncloud min-version="9.1.5" max-version="12.0"/>
 	</dependencies>
-	<website>https://github.com/tomneedham/ocxmas/</website>
-	<bugs>https://github.com/tomneedham/ocxmas/issues</bugs>
-	<repository type="git">https://github.com/tomneedham/ocxmas.git</repository>
+	<website>https://github.com/hurradieweltgehtunter/oc_landbot</website>
+	<bugs>https://github.com/hurradieweltgehtunter/oc_landbot/issues</bugs>
+	<repository type="git">https://github.com/hurradieweltgehtunter/oc_landbot.git</repository>
 </info>
