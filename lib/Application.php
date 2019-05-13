@@ -16,16 +16,21 @@ class Application extends App {
 		parent::__construct('landbot', $urlParams);
 		$container = $this->getContainer();
 
-		// Start the snow loader
+		/** @var \OCP\AppFramework\IAppContainer $container */
+		$container = $this->getContainer();
+
+		/** @var IContentSecurityPolicyManager $cspManager */
+		$cspManager = $container->query(IContentSecurityPolicyManager::class);
+		$policy = new ContentSecurityPolicy();
+		$policy->addAllowedConnectDomain('static.landbot.io');
+		$cspManager->addDefaultPolicy($policy);
+
+		// Start the loader
 		$loader = new LandbotLoader(
 			$container->getServer()->getConfig(),
 			$container->getServer()->getRequest(),
 			$container->getServer()->getUserSession()
 		);
-
-		// $policy = new OCP\AppFramework\Http\EmptyContentSecurityPolicy();
-		// $policy->addAllowedScriptDomain('landbot.io');
-		// \OC::$server->getContentSecurityPolicyManager()->addDefaultPolicy($policy);
 
 	}
 

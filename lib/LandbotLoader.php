@@ -7,8 +7,6 @@ use OCP\IRequest;
 use OCP\IUserSession;
 use OCP\Util;
 
-
-
 class LandbotLoader {
 
 	/**
@@ -28,6 +26,10 @@ class LandbotLoader {
 		IConfig $config,
 		IRequest $request,
 		IUserSession $userSession) {
+
+			// $policy = new OCP\AppFramework\Http\EmptyContentSecurityPolicy();
+			// $policy->addAllowedScriptDomain('landbot.io');
+			// \OC::$server->getContentSecurityPolicyManager()->addDefaultPolicy($policy);
 
 		Util::addScript('landbot', 'landbot');
 
