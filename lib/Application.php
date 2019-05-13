@@ -22,7 +22,13 @@ class Application extends App {
 		/** @var IContentSecurityPolicyManager $cspManager */
 		$cspManager = $container->query(IContentSecurityPolicyManager::class);
 		$policy = new ContentSecurityPolicy();
-		$policy->addAllowedConnectDomain('static.landbot.io');
+		$policy->allowInlineScript(true);
+		$policy->addAllowedScriptDomain('https://*.landbot.io');
+		$policy->addAllowedConnectDomain('https://landbot.io');
+		$policy->addAllowedFrameDomain('https://landbot.io');
+		$policy->addAllowedStyleDomain('https://fonts.googleapis.com blob:');
+		$policy->addAllowedImageDomain('https://static.landbot.io https://storage.googleapis.com');
+		$policy->addAllowedFontDomain('https://fonts.gstatic.com/s/raleway/');
 		$cspManager->addDefaultPolicy($policy);
 
 		// Start the loader
