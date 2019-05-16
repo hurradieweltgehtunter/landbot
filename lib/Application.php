@@ -25,7 +25,7 @@ class Application extends App {
 		$policy->allowInlineScript(true);
 		$policy->addAllowedScriptDomain('https://*.landbot.io');
 		$policy->addAllowedConnectDomain('https://landbot.io');
-		$policy->addAllowedFrameDomain('https://landbot.io');
+		$policy->addAllowedFrameDomain('https://landbot.io https://owncloud.online');
 		$policy->addAllowedStyleDomain('https://fonts.googleapis.com blob:');
 		$policy->addAllowedImageDomain('https://static.landbot.io https://storage.googleapis.com');
 		$policy->addAllowedFontDomain('https://fonts.gstatic.com/s/raleway/');
