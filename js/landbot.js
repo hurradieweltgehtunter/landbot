@@ -4,7 +4,7 @@ $(document).ready(function() {
     dataType: "script",
     success: function() {
       var myLandbotLivechat = new LandbotLivechat({
-        index: 'https://landbot.io/u/H-174286-HU8FGLJPTP6G6PRK/index.html',
+        index: 'https://landbot.io/u/H-175745-RUBB17WJGDF5BXP3/index.html',
       });
 
       var urlCustomAvatar = "https://storage.googleapis.com/media.helloumi.com/channels/IRSRASHJB13UYVU6DCOWZBJCJUUTRRD7.jpg";
