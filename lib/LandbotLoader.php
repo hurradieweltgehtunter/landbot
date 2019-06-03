@@ -2,8 +2,6 @@
 
 namespace OCA\Landbot;
 
-use OCP\IConfig;
-use OCP\IRequest;
 use OCP\IUserSession;
 use OCP\Util;
 
@@ -23,42 +21,7 @@ class LandbotLoader {
 	protected $userSession;
 
 	public function __construct(
-		IConfig $config,
-		IRequest $request,
 		IUserSession $userSession) {
 
-			// $policy = new OCP\AppFramework\Http\EmptyContentSecurityPolicy();
-			// $policy->addAllowedScriptDomain('landbot.io');
-			// \OC::$server->getContentSecurityPolicyManager()->addDefaultPolicy($policy);
-
-		Util::addScript('landbot', 'landbot');
-
 	}
-
-	/**
-	 * Detect if we are on the login page
-	 * @return bool
-	 */
-	private function isLogin() {
-		return $this->userSession->isLoggedIn() !== true
-			&& strpos($this->request->getRequestUri(), '/login') !== false;
-	}
-
-	/**
-	 * Detect if we are on the login page
-	 * @return bool
-	 */
-	private function isPublicShare() {
-		return strpos($this->request->getRequestUri(), '/s/') !== false;
-	}
-
-	/**
-	 * Detect if we are on the login page
-	 * @return bool
-	 */
-	private function isFilesApp() {
-		return $this->userSession->isLoggedIn()
-			&& strpos($this->request->getRequestUri(), '/apps/files') !== false;
-	}
-
 }
