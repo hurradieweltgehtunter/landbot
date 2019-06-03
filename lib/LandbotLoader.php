@@ -23,5 +23,8 @@ class LandbotLoader {
 	public function __construct(
 		IUserSession $userSession) {
 
+		if($userSession->isLoggedIn()) {
+			Util::addScript('landbot', 'landbot');
+		}
 	}
 }
